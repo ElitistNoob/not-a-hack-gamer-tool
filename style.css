@@ -295,12 +295,13 @@ ul {
   .nav {
     display: grid;
     position: fixed;
-    right: -100%;
+/*     right: -100%; */
     flex-direction: column;
     padding: 1em;
     height: 100vh;
     background: linear-gradient(45deg, rgba(0, 0, 0), rgba(1, 1, 1, 0.9));
-    transition: 500ms linear;
+    transition: 150ms linear;
+    opacity: 0;
   }
 
   .nav::before {
@@ -315,7 +316,8 @@ ul {
   /*Hamburger animation*/
 
   .nav-open .nav {
-    transform: translateX(-100%);
+/*     transform: translateX(-100%); */
+    opacity: 1;
   }
 
   .nav-open .hamburger {
