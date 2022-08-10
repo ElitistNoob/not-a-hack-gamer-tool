@@ -156,6 +156,10 @@ ul {
   background: #226f07;
 }
 
+.btn:focus {
+  outline: 1px solid #fff;
+}
+
 /*======
  PAGE
 ======*/
