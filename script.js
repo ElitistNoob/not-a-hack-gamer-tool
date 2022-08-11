@@ -10,3 +10,7 @@ navToggle.addEventListener('click', toggle)
 navLinks.forEach(item => {
   item.addEventListener("click", toggle)
 })
+
+const navHeight = document.querySelector('.nav').offset
+
+document.documentElement.style.setProperty('--scroll-padding', navHeight + 1 + "px")
