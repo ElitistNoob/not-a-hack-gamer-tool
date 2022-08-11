@@ -45,6 +45,11 @@ html {
   scroll-padding: var(--scroll-padding, 100px);
 }
 
+@media (max-width: 675px) {
+  html {
+    scroll-padding: 0;
+}
+
 /*======
  TYPOGRAPHY
 ======*/
