@@ -190,7 +190,7 @@ ul {
   align-items: center;
   width: 100%;
   background: linear-gradient(90deg, #010101 30%, var(--highlight));
-  height: 100px;
+  padding: 2em 0;
   box-shadow: 0 0 30px rgb(0, 0, 0);
   z-index: 10;
   top: 0;
