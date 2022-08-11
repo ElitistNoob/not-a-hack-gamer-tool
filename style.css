@@ -48,6 +48,7 @@ html {
 @media (max-width: 675px) {
   html {
     scroll-padding: 0;
+  }
 }
 
 /*======
@@ -162,10 +163,6 @@ ul {
   background: #226f07;
 }
 
-.btn:focus {
-  outline: 1px solid #fff;
-}
-
 /*======
  PAGE
 ======*/
@@ -176,6 +173,16 @@ ul {
   position: relative;
 }
 
+.nav-container {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  z-index: 50;
+  background-color: #eee;
+}
+
 .nav {
   display: flex;
   position: fixed;
@@ -183,7 +190,7 @@ ul {
   align-items: center;
   width: 100%;
   background: linear-gradient(90deg, #010101 30%, var(--highlight));
-  padding: 2em 0;
+  height: 100px;
   box-shadow: 0 0 30px rgb(0, 0, 0);
   z-index: 10;
   top: 0;
@@ -250,6 +257,7 @@ ul {
 
 @media (max-width: 675px) {
   .nav__mobile {
+    position: relative;
     display: grid;
     position: fixed;
     align-items: center;
@@ -263,7 +271,7 @@ ul {
     border-radius: 5px 0 0 5px;
     cursor: pointer;
     z-index: 50;
-    transition: 350ms linear;
+    transition: 150ms linear;
   }
 
   .hamburger {
@@ -301,13 +309,13 @@ ul {
   .nav {
     display: grid;
     position: fixed;
-/*     right: -100%; */
+    /* right: -100%; */
+    opacity: 0;
     flex-direction: column;
     padding: 1em;
     height: 100vh;
     background: linear-gradient(45deg, rgba(0, 0, 0), rgba(1, 1, 1, 0.9));
     transition: 150ms linear;
-    opacity: 0;
   }
 
   .nav::before {
@@ -322,7 +330,8 @@ ul {
   /*Hamburger animation*/
 
   .nav-open .nav {
-/*     transform: translateX(-100%); */
+    /* transform: translateX(-100%); */
+    /* left: 100%; */
     opacity: 1;
   }
 
